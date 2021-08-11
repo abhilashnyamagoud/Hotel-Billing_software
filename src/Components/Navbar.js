@@ -7,6 +7,7 @@ import Customers from './Customers';
 import Account from './Account';
 import Products from './Products';
 import Billing from './Billing';
+import PrivateRoute from './PrivateRoute';
 
 const Navbar=(props)=>{
     const[toggle,setToggle]=useState(false)
@@ -59,12 +60,13 @@ const Navbar=(props)=>{
             <Route path='/' component={Home} exact />
             <Route path='/register' component={Register} exact />
             <Route path='/login' render={(props)=>{
-                return <Login {...props} handleToggle={handleToggle} />
+                return <Login {...props} handleToggle={handleToggle}  exact/>
             }} />
-            <Route component={Customers} path='/customers' exact />
-            <Route path='/account' component={Account} exact />
-            <Route path='/product' exact component={Products} />
-            <Route path='/billing' exact component={Billing}/>
+            <PrivateRoute path='/customers' component={Customers} exact />
+            <PrivateRoute path='/account' component={Account} exact />
+            <PrivateRoute path='/product' component={Products} exact />
+            <PrivateRoute path='/billing' component={Billing} exact/>
+            
         </div>
     )
 }
