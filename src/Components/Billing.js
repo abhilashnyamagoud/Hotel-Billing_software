@@ -74,7 +74,7 @@ const Billing=(props)=>{
                  <option>Select customer</option>
                  {
                      customer.map((ele)=>{
-                         return <option key={ele._id} value={ele.name} >{ele.name} </option>
+                         return <option key={ele._id} value={ele._id} >{ele.name} </option>
                      })
                  }
                  </select>   
@@ -100,7 +100,7 @@ const Billing=(props)=>{
                      <option>Select Product</option>
                      {
                          product.map((prod)=>{
-                             return <option key={prod._id} value={prod.name}>{prod.name} </option>
+                             return <option key={prod._id} value={prod._id}>{prod.name} </option>
                          })
                      }
                  </select>
@@ -111,7 +111,7 @@ const Billing=(props)=>{
                          <div className='col-md-2'>
                            {
                                product.map((ele)=>{
-                                    if(ele.name===prodSelect){
+                                    if(ele._id===prodSelect){
                                         return <p key={ele._id}> INR {ele.price}</p>
                                     }
                                })
@@ -120,7 +120,7 @@ const Billing=(props)=>{
                          <div className='col-md-2'>
                            {
                                product.map((ele)=>{
-                                    if(ele.name===prodSelect){
+                                    if(ele._id===prodSelect){
                                         return <p key={ele._id}>INR {ele.price*count}</p>
                                     }
                                })
