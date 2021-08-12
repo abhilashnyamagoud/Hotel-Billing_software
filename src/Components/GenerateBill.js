@@ -57,6 +57,9 @@ const GenerateBill=(props)=>{
                              </div>
                         })
                     }
+                         <button className='btn btn-lg btn-info' onClick={()=>{
+                        window.print()
+                    }}>Generate Bill</button>
 
                      </div>
                 })
