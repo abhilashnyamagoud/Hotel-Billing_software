@@ -1,10 +1,8 @@
 import React from 'react'
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector} from 'react-redux'
 
 const GenerateBill=(props)=>{
     const id=props.match.params.id;
-
-    console.log(id)
 
     const bill=useSelector(state=>state.bill)
     console.log('bill',bill)
@@ -12,7 +10,7 @@ const GenerateBill=(props)=>{
     const customer=useSelector(state=>state.customer)
 
     const singleBill=bill.filter((ele)=>{
-       return  ele._id ==id
+       return  ele._id ===id
     })
     console.log(singleBill)
 

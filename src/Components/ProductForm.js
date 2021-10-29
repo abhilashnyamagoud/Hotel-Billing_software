@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 const ProductForm=(props)=>{
-    const {formSubmit,_id,name:prodName,price:prodPrice,handleToggle,toggle}=props
+    const {formSubmit,name:prodName,price:prodPrice,handleToggle,toggle}=props
     const [name,setName]=useState(prodName?prodName:'')
     const [price,setPrice]=useState(prodPrice?prodPrice:'')
     const[formErrors,setFormErrors]=useState({})

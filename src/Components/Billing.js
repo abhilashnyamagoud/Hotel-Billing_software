@@ -17,7 +17,6 @@ const Billing=(props)=>{
     const customer=useSelector(state=>state.customer)
     const product=useSelector(state=>state.product)
     console.log(customer)
-    const bills=useSelector(state=>state.bill)
     // console.log('bills',bills)
     const lineItem=useSelector((state)=>state.lineItem)
     console.log('LineItems', lineItem)

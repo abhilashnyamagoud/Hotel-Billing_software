@@ -25,7 +25,7 @@ const BillDisplay=(props)=>{
     }
     useEffect(()=>{
         dispatch(startGetBills())
-    },[])
+    },[dispatch])
 
     let  arr=[]
     const displayName=(id)=>{

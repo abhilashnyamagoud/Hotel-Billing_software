@@ -12,13 +12,13 @@ const App=(props)=>{
     if(localStorage.getItem('token')){
       dispatch(startGetCust())
     }
-},[])
+},[dispatch])
 
 useEffect(()=>{
   if(localStorage.getItem('token')){
     dispatch(startGetProduct())
   }
-},[])
+},[dispatch])
 
   return(
     <div>

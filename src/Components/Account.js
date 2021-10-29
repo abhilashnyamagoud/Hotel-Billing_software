@@ -8,7 +8,7 @@ const Account=(props)=>{
 
     useEffect(()=>{
         dispatch(startGetUser())
-    },[])
+    },[dispatch])
     const user=useSelector((state)=>{
         return state.user
     })

@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 
 
 const CustomerForm=(props)=>{
-    const {formSubmit,_id:id,email:emaill,mobile:phone,name:nameA,handleEdit,toggle}=props
+    const {formSubmit,email:emaill,mobile:phone,name:nameA,handleEdit,toggle}=props
 
     const validate=values=>{
         const errors={};
