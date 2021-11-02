@@ -36,7 +36,8 @@ const Billing=(props)=>{
         setCount(count+1)  
     }
     const handleCountDec=()=>{
-        if(count <= 0){
+        console.log(count)
+        if(count <= 1){
             alert('not Valid')
         }else{
         setCount(count-1)
